@@ -393,7 +393,15 @@ public class Logic1
 	fizzString2(3) --> "Fizz!"
 	fizzString2(15) --> "FizzBuzz!"*/
 	public String fizzString2(int n) {
-  
+  		if (n % 3 == 0 && n % 5 == 0) {
+		        return "FizzBuzz!";
+		    } else if (n % 3 == 0) {
+		        return "Fizz!";
+		    } else if (n % 5 == 0) {
+		        return "Buzz!";
+		    } else {
+		        return n + "!";
+   		    }
 	}
 
 	/*When squirrels get together for a party, they like to have sodas. 
@@ -406,7 +414,11 @@ public class Logic1
 	sodaParty(50, false) --> true
 	sodaParty(70, true) --> true */
 	public boolean sodaParty(int sodas, boolean isWeekend) {
-  
+  		if (isWeekend) {
+        		return sodas >= 40;
+    			} else {
+        	return sodas >= 40 && sodas <= 60;
+   			 }
 	}
 
 }
